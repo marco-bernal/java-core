@@ -59,3 +59,33 @@ objects known as a beans. Also, it's responsible for managing their life cycles.
     * Inject by constructor over setter and field
     * Add an interface whenever makes sense
     * Avoid injecting components with @Autowired (field injection)
+    
+#### Spring Bean Life Cycle
+
+![Bean Life Cycle](SpringLifeCycle.png "Spring Bean Life Cycle")
+
+    * Instanciate
+    * Populate Properties
+    * Call setBeanName
+    * Call setBeanFactory 
+    * Call setApplicationContext
+    * Preinizialization
+    * Initialize Beans
+    * Custom Init Method
+    * Post Inizialization
+    * Bean Ready to Use
+
+##### @PostConstruct
+Methods annotated will be called after the bean is constructed, but before it's returned to the requesting object. 
+
+##### @PreDestroy    
+Is called just before the bean is destroyed by the container.
+
+### Bean Post Processors
+Allows to interact with beans inside the Spring context life cycle. By implementing the interface `BeanPostProcessor`
+and the methods:
+
+    * postProcessBeforeInitialization 
+    * postProcessAfterInizialization
+
+Rarely used by developers

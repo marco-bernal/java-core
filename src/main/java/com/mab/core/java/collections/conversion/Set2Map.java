@@ -15,10 +15,10 @@ public class Set2Map {
 
     public Map<Integer, String> getMapValuesFromSet(Set<VdpsdkAlgorithm> values) {
         return values.stream()
-                .collect(Collectors.toMap(VdpsdkAlgorithm::getCode,
+                .collect(Collectors.toMap(
+                        VdpsdkAlgorithm::getCode,
                         VdpsdkAlgorithm::getName
                 ));
     }
-
 
 }
