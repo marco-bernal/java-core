@@ -3,6 +3,8 @@ package com.mab.core.java.streams;
 import com.mab.core.model.Patient;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static java.util.Comparator.comparing;
@@ -54,6 +56,7 @@ public class StreamSortingExample {
      * Sorting String using stream().sorted() and String.compareTo.
      */
     public List<Patient> sortByTumorTypeStreamTwo(List<Patient> patients) {
+
         return patients.stream()
                 .sorted(comparing(Patient::getTumorType))
                 .collect(toList());
