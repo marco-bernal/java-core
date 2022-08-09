@@ -82,7 +82,7 @@ Methods annotated will be called after the bean is constructed, but before it's 
 Is called just before the bean is destroyed by the container.
 
 ### Bean Post Processors
-Allows to interact with beans inside the Spring context life cycle. By implementing the interface `BeanPostProcessor`
+Allows interacting with beans inside the Spring context life cycle. By implementing the interface `BeanPostProcessor`
 and the methods:
 
     * postProcessBeforeInitialization 

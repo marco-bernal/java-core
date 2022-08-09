@@ -30,7 +30,7 @@ public class MixArrayAndCollection {
         return Arrays.stream(baseTumors)
                 .map(String::trim)
                 .filter(tumor -> !"non tumor".equals(tumor))
-                .filter(tumor -> anotherSourceTumorsClean.contains(tumor))
+                .filter(anotherSourceTumorsClean::contains)
                 .collect(toList());
     }
 

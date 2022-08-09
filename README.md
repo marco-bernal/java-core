@@ -2,34 +2,44 @@
 
 Repo that showcases examples of spring core and java.
 
-## Java core
-    
+## Java Core
     * Java 8-11 features
+    * Collections        
     * Lambda Expressions and Streams
-    * Collections
-    * Generics 
     * Concurrency
-    * OOP
+    * JVM and the Garbage Collector     
+    * OOP    
+
+    * Generics
     * IO
+    * String operations
+    * Reflection API
     * Regular Expressions
-    * Garbage Collector (JVM) 
-   
-## Spring core
-    
+
+## Spring Core 
     * Spring 5 features 
-    * IoC
-    * DI
+    * IoC/DI
+    * Annotations
     * Bean cycle
     * Bean scope
     * AOP
     * Validator
     
-## Spring boot
+## Spring Boot
+    * Annotations
+    * Configuration
+    * Testing
 
-    *
-    *
-    *
-    
+## Spring Security
+    * 
+    * 
+    * 
+
+## Spring JPA
+    * JPA Repositories
+    * Relationships
+    * Inheritance
+
 ## IntelliJ Ultimate pro tip:
 
     * Create a new project from File -> New -> Project -> Spring Initialzr 
