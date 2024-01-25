@@ -1,10 +1,8 @@
-package com.mab.core.java.streams;
+package com.mab.core.old.streams;
 
 import com.mab.core.model.Patient;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import static java.util.Comparator.comparing;

@@ -1,4 +1,4 @@
-package com.mab.core.java.features.default_method;
+package com.mab.core.old.features.default_method;
 
 //TODO: Add implementations and unit tests
 

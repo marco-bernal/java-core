@@ -1,4 +1,4 @@
-package com.mab.core.java.streams;
+package com.mab.core.old.streams;
 
 import com.mab.core.model.Algorithm;
 
@@ -9,7 +9,7 @@ import java.util.UUID;
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 
-//TODO: Add unit tests, and change the model to something else than Algorithm
+//TODO: Add unit tests. Replace Algorithm with Customer or something else
 
 public class MapObjectToSingleProperty {
 

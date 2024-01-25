@@ -1,4 +1,4 @@
-package com.mab.core.java.streams;
+package com.mab.core.old.streams;
 
 import java.util.Arrays;
 import java.util.List;
@@ -8,7 +8,7 @@ import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
 import static java.util.stream.Stream.of;
 
-//TODO: Add unit tests, and change the model to something else than Tumors
+//TODO: Add unit tests. Replace Tumor with Customer or something else
 public class MixArrayAndCollection {
 
     /**

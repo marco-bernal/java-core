@@ -14,7 +14,7 @@
     <name>java-core</name>
     <description>Core java project that showcases Generics, Streams, Collections, Concurrency and other features.</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <commons-io.version>2.13.0</commons-io.version>
     </properties>
     <dependencies>

@@ -1,4 +1,4 @@
-package com.mab.core.java.io;
+package com.mab.core.old.io;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
@@ -53,23 +53,23 @@ class TempFolder {
     }
 
 
-    boolean isMiraxFolder(String filePath) throws IOException {
-        String folder = Paths.get(filePath).getParent().toString();
-
-        List<String> files = Files.list(Paths.get(folder))
-                .filter(file -> file.toString().endsWith(".ini") || file.toString().endsWith(".dat"))
-                .map(Object::toString)
-                .collect(Collectors.toList());
-
-        if (!files.isEmpty()) {
-            files.forEach(file -> log.info(""));
-            return true;
-        }
-
-        if (filePath.substring(filePath.lastIndexOf(".") + 1).equals(folder)) {
-            return true;
-        }
-
-        return false;
-    }
+//    boolean isMiraxFolder(String filePath) throws IOException {
+//        String folder = Paths.get(filePath).getParent().toString();
+//
+//        List<String> files = Files.list(Paths.get(folder))
+//                .filter(file -> file.toString().endsWith(".ini") || file.toString().endsWith(".dat"))
+//                .map(Object::toString)
+//                .collect(Collectors.toList());
+//
+//        if (!files.isEmpty()) {
+//            files.forEach(file -> log.info(""));
+//            return true;
+//        }
+//
+//        if (filePath.substring(filePath.lastIndexOf(".") + 1).equals(folder)) {
+//            return true;
+//        }
+//
+//        return false;
+//    }
 }

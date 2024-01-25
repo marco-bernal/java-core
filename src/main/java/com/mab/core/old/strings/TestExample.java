@@ -1,4 +1,4 @@
-package com.mab.core.java.strings;
+package com.mab.core.old.strings;
 
 
 import java.io.File;
@@ -62,6 +62,7 @@ public class TestExample {
 //        System.out.println(String.format("Extracted filepath: %1$s and parent folder: %2$s",
 //                extractFileName("images/mirax/GO253638_928373X_HNE/GO253638_928373X_HNE.mrxs"),
 //                extractParentFolder("images/mirax/GO253638_928373X_HNE")));
+
     }
 
     public static String extractFileName(String fullFilePath) {

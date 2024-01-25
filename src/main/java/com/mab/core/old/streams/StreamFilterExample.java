@@ -1,4 +1,4 @@
-package com.mab.core.java.streams;
+package com.mab.core.old.streams;
 
 import com.mab.core.model.Patient;
 
@@ -8,12 +8,8 @@ import java.util.Set;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
 
-/**
- * Using static methods, anyway. It's recommended to avoid them because are harder to test.
- * TODO: Verify above statement
- */
 
-//TODO: Add unit tests, and change the model to something else than Patient
+//TODO: Add unit tests. Replace Patient with Customer or something else
 
 class StreamFilterExample {
 

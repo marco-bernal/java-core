@@ -1,9 +1,8 @@
-package com.mab.core.java.oop.polymorphism;
+package com.mab.core.old.oop.polymorphism;
 
 import lombok.extern.slf4j.Slf4j;
 
-//TODO: Add unit tests
-
+//TODO: Add more realistic/useful implementation and unit tests
 
 @Slf4j
 public class Overloading {
