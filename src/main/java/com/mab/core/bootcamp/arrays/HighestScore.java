@@ -11,6 +11,7 @@ public class HighestScore {
 
     /**
      * Gets the highest score from a random array.
+     * Workbook 6.5 from Java Bootcamp.
      *
      * @return highest score from the array.
      */
