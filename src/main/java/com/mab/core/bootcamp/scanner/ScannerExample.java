@@ -3,6 +3,11 @@ package com.mab.core.bootcamp.scanner;
 import java.util.Scanner;
 
 public class ScannerExample {
+
+    /**
+     * Basic usage of Scanner to read input from the user.
+     * @param args main function args.
+     */
     public static void main(String[] args) {
 
         System.out.println("Scanner example.");
@@ -29,6 +34,5 @@ public class ScannerExample {
         System.out.println("Username:" + username);
         System.out.println("City:" + city);
         System.out.println("Country:" + country);
-
     }
 }
