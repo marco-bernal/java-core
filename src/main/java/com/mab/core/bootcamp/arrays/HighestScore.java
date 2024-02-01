@@ -2,12 +2,10 @@ package com.mab.core.bootcamp.arrays;
 
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.Random;
+import static com.mab.core.Utils.generateRandomNumber;
 
 @Slf4j
 public class HighestScore {
-
-    private final Random random = new Random();
 
     /**
      * Gets the highest score from a random array.
@@ -39,17 +37,9 @@ public class HighestScore {
         int[] randomArray = new int[limit];
 
         for (int i=0; i < limit; i++) {
-            randomArray[i] = generateRandomNumber();
+            randomArray[i] = generateRandomNumber(0, 4999);
         }
 
         return randomArray;
-    }
-
-    private int generateRandomNumber() {
-        //generates a number between 0 and 49999
-        int min = 0;
-        int max = 49999;
-
-        return min + random.nextInt((max - min)) + 1;
     }
 }
