@@ -15,7 +15,7 @@
     <description>Core java project that showcases Generics, Streams, Collections, Concurrency and other features.</description>
 
     <properties>
-        <java.version>17</java.version>
+        <java.version>22</java.version>
         <lombok.version>1.18.32</lombok.version>
         <commons-io.version>2.16.1</commons-io.version>
     </properties>
