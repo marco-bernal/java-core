@@ -2,7 +2,7 @@ package com.mab.core.bootcamp.arrays;
 
 import lombok.extern.slf4j.Slf4j;
 
-import static com.mab.core.Utils.generateRandomNumber;
+import static com.mab.core.util.NumberUtils.generateRandomNumber;
 
 @Slf4j
 public class HighestScore {

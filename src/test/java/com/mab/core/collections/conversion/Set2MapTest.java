@@ -1,5 +1,6 @@
-package com.mab.core.old.collections.conversion;
+package com.mab.core.collections.conversion;
 
+import com.mab.core.collections.conversion.Set2Map;
 import com.mab.core.model.Customer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

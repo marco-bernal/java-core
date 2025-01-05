@@ -1,6 +1,6 @@
 package com.mab.core.bootcamp.arrays;
 
-import static com.mab.core.Utils.generateRandomNumber;
+import static com.mab.core.util.NumberUtils.generateRandomNumber;
 
 public class RandomNumbersArrayGenerator {
 

@@ -1,4 +1,4 @@
-package com.mab.core.old.streams;
+package com.mab.core.streams;
 
 import com.mab.core.model.Patient;
 import org.springframework.stereotype.Component;

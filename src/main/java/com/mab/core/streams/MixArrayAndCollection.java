@@ -1,4 +1,4 @@
-package com.mab.core.old.streams;
+package com.mab.core.streams;
 
 import java.util.Arrays;
 import java.util.List;

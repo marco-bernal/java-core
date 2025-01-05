@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+//TODO: Change to record
 @Getter
 @Setter
 @Builder

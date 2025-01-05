@@ -1,11 +1,11 @@
-package com.mab.core;
+package com.mab.core.util;
 
 import lombok.experimental.UtilityClass;
 
 import java.util.Random;
 
 @UtilityClass
-public class Utils {
+public class NumberUtils {
 
     private final Random random = new Random();
 

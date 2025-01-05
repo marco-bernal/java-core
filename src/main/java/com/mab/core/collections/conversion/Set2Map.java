@@ -1,4 +1,4 @@
-package com.mab.core.old.collections.conversion;
+package com.mab.core.collections.conversion;
 
 import com.mab.core.model.Customer;
 
