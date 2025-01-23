@@ -1,18 +1,22 @@
 package com.mab.core.streams;
 
-
 import com.mab.core.model.CarRecommendationDto;
+import com.mab.core.util.LoadDataSetsUtils;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static com.mab.core.util.StreamUtils.loadCars;
-
-
+@Component
+@RequiredArgsConstructor
 public class MapOperations {
 
+    private final LoadDataSetsUtils loadDataSetsUtils;
+
+    //TODO: Add more operations
     public Set<CarRecommendationDto> getCarRecommendations() {
-        return loadCars().stream()
+        return loadDataSetsUtils.loadCars().stream()
                 .filter(c -> isCarRecommended(c.year(), c.price()))
                 .map(c -> new CarRecommendationDto(
                             c.make(),
@@ -31,10 +35,6 @@ public class MapOperations {
     }
 
     private boolean isCarRecommended(Integer year, Double price) {
-        if (year > 2010)
-            if (price < 12000)
-                return true;
-
-        return false;
+        return year > 2010 && price < 12000;
     }
 }

@@ -1,34 +1,31 @@
 package com.mab.core.streams;
 
 import com.mab.core.model.Person;
+import com.mab.core.test_utils.IntegrationTestBaseConfig;
+import com.mab.core.util.LoadDataSetsUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.List;
 import java.util.stream.IntStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@IntegrationTestBaseConfig
 class IteratingIntStreamTest {
+
+    @Autowired
+    private LoadDataSetsUtils loadDataSetsUtils;
 
     private IteratingIntStream iteratingIntStream;
 
     @BeforeEach
     void setUp() {
-        iteratingIntStream = new IteratingIntStream();
-    }
-
-    @Test
-    void iterateWithRange() {
-        iteratingIntStream.iterateWithRange();
-    }
-
-    @Test
-    void iterateWithIterate() {
-        IntStream.iterate(0, i -> i +1)
-                .filter(n -> n % 2 == 0)
-                .limit(9)
-                .forEach(System.out::print);
+        iteratingIntStream = new IteratingIntStream(loadDataSetsUtils);
     }
 
     @Test

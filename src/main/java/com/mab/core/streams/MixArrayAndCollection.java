@@ -20,6 +20,7 @@ public class MixArrayAndCollection {
 
     public List<String> getTumors() {
 
+        //TODO: Perform all operations in a single stream
         String[] baseTumors = getTumorTypes(TUMORS);
         Set<String> anotherSourceTumorsClean = getTumorsFromAnotherSource()
                 .stream()

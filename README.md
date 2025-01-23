@@ -2,16 +2,17 @@
 
 Repo that showcases examples of Java core.
 
-    * Java features
+    * Java 8-23 LTS features 
     * Arrays
-    * String operations    
-    * Collections        
+    * String operations
+    * Collections  
     * Lambda Expressions and Streams
-        
-    * Concurrency
     * JVM and the Garbage Collector     
     * OOP    
 
+    * Concurrency
+    * Annotations
+    * Enums
     * Generics
     * IO
 

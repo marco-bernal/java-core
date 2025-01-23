@@ -3,6 +3,7 @@ package com.mab.core.streams;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
 public class DistinctNumbers {
 
     public List<Integer> removeDuplicatesDistinct(List<Integer> numbers) {
@@ -15,3 +16,4 @@ public class DistinctNumbers {
         return new HashSet<>(numbers);
     }
 }
+ 
