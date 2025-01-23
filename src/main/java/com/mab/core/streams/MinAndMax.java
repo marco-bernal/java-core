@@ -16,4 +16,6 @@ public class MinAndMax {
                 .min(Comparator.naturalOrder())
                 .orElse(0);
     }
+
+    //TODO: Add more ways to achieve the same result
 }

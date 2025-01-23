@@ -1,25 +1,20 @@
 package com.mab.core.streams;
 
 import com.mab.core.model.Person;
+import com.mab.core.util.LoadDataSetsUtils;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.stream.IntStream;
 
-import static com.mab.core.util.StreamUtils.loadPeople;
-
-
+@Component
+@RequiredArgsConstructor
 public class IteratingIntStream {
 
-    public void iterateWithRange() {
-        System.out.println("Range exclusive");
-        IntStream.range(0, 10).forEach(System.out::print);
-
-        System.out.println("\nRange inclusive");
-        IntStream.rangeClosed(1, 10).forEach(System.out::print);
-    }
+    private final LoadDataSetsUtils loadDataSetsUtils;
 
     public List<Person> loadFemales() {
-        return loadPeople().stream()
+        return loadDataSetsUtils.loadPeople().stream()
                 .filter(p-> p.gender().equals("Female"))
                 .filter(p-> p.age() < 30)
                 .toList();

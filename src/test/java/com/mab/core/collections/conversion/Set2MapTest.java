@@ -1,8 +1,6 @@
 package com.mab.core.collections.conversion;
 
-import com.mab.core.collections.conversion.Set2Map;
 import com.mab.core.model.Customer;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -10,16 +8,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static com.mab.core.collections.conversion.set.Set2Map.getMapValuesFromSet;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class Set2MapTest {
-
-    private Set2Map set2Map;
-
-    @BeforeEach
-    void setUp() {
-        set2Map = new Set2Map();
-    }
 
     @Test
     void shouldConvertSetToMap() {
@@ -27,7 +19,7 @@ class Set2MapTest {
      Set<Customer> customerSet = filloutCustomerSet();
 
      //when
-     Map<Integer, String> customerMap = set2Map.getMapValuesFromSet(customerSet);
+     Map<Integer, String> customerMap = getMapValuesFromSet(customerSet);
 
      //then
      assertThat(customerMap)
