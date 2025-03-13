@@ -1,4 +1,4 @@
-package com.mab.core.old.oop.polymorphism.overriding;
+package com.mab.core.oop.polymorphism.overriding;
 
 import lombok.extern.slf4j.Slf4j;
 

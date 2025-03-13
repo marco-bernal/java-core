@@ -12,7 +12,7 @@ import java.util.Set;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @IntegrationTestBaseConfig
-class FilterOperationsTest {
+class FilterOperationsIT {
 
     @Autowired
     private LoadDataSetsUtils loadDataSetsUtils;

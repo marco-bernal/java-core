@@ -9,6 +9,7 @@ import java.util.UUID;
 
 import static java.util.Comparator.comparing;
 
+//TODO: Switch Algorithm with User/Person/Employee or Car
 public class MapObjectToSingleProperty {
 
     public List<UUID> getAlgorithmUuids(List<Algorithm> algorithms) {

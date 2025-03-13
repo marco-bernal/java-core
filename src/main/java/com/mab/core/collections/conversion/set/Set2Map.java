@@ -16,6 +16,7 @@ public class Set2Map {
      * @param values customer set.
      * @return Map<Integer, String> containing customer's age and name.
      */
+    //TODO: use a different model object
     public static Map<Integer, String> getMapValuesFromSet(Set<Customer> values) {
         return values.stream()
                 .collect(Collectors.toMap(

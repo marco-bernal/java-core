@@ -5,10 +5,7 @@ import com.mab.core.test_utils.IntegrationTestBaseConfig;
 import com.mab.core.util.LoadDataSetsUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.List;
 import java.util.stream.IntStream;
@@ -16,7 +13,7 @@ import java.util.stream.IntStream;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @IntegrationTestBaseConfig
-class IteratingIntStreamTest {
+class IteratingIntStreamIT {
 
     @Autowired
     private LoadDataSetsUtils loadDataSetsUtils;

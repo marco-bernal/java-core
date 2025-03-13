@@ -19,33 +19,22 @@ public class GroupingOperations {
 
     private final LoadDataSetsUtils loadDataSetsUtils;
 
-    public void groupCarsByMake() {
-        //TODO: All filters to return only 2 makes
-        Map<String, List<Car>> carsByMake = loadDataSetsUtils.loadCars()
+    public Map<String, List<Car>> groupCarsByMake() {
+
+        return loadDataSetsUtils.loadCars()
                 .stream()
                 .collect(groupingBy(Car::make));
-
-        //TODO: Delete this
-        carsByMake.forEach(
-                (make, cars) -> {
-                    log.info("Make: {}", make);
-
-                    cars.forEach(c -> log.info("Car: {}", c));
-                }
-        );
     }
 
 
-    public void countingByMake() {
-        //TODO: Return counts
-        Map<String, Long> countsByMake = loadDataSetsUtils.loadCars()
+    public Map<String, Long> countingByMake() {
+
+        return loadDataSetsUtils.loadCars()
                 .stream()
                 .collect(groupingBy(Car::make, Collectors.counting()));
-
-        //TODO: Delete this
-        countsByMake.forEach(
-                (make, count) ->
-                        log.info("Make: {}. Count: {}.", make, count)
-        );
     }
+
+    //TODO: Add more complex examples: get 5 most expensive cars by make.
+    // And, examples like that one.
+
 }

@@ -1,4 +1,4 @@
-package com.mab.core.old.oop.polymorphism;
+package com.mab.core.oop.polymorphism;
 
 import lombok.extern.slf4j.Slf4j;
 
