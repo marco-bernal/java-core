@@ -1,7 +1,7 @@
 package com.mab.core.oop.equals_hash_code;
 
-import com.mab.core.model.Customer;
-import com.mab.core.model.CustomerWithEquals;
+import com.mab.core.oop.equals_hash_code.model.Customer;
+import com.mab.core.oop.equals_hash_code.model.CustomerWithEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

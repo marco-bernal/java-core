@@ -1,8 +1,12 @@
 package com.mab.core.model;
 
-import java.time.Instant;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Builder;
 
-public record Employee(
+import java.time.LocalDateTime;
+
+@Builder
+public record EmployeeDto(
         String employeeId,
         String fullName,
         String jobTitle,
@@ -11,10 +15,12 @@ public record Employee(
         String gender,
         String ethnicity,
         Integer age,
-        Instant hireDate,
+        @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
+        LocalDateTime hireDate,
         Double annualSalary,
         Integer bonusPercentage,
         String country,
         String city,
-        Instant exitDate
+        @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
+        LocalDateTime exitDate
 ) {}

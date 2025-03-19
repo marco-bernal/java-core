@@ -1,18 +1,12 @@
 package com.mab.core.streams;
 
-import com.mab.core.model.Patient;
-import org.springframework.stereotype.Component;
-
+import com.mab.core.model.NbaPlayerDto;
 import java.util.List;
 
 import static java.util.Comparator.comparing;
-import static java.util.stream.Collectors.toList;
 
-
-//TODO: Delete spring stereotype, Add unit tests, and change the model to something else than Patient
-
-@Component
 public class StreamSortingExample {
+//TODO: Remove garbage code.
 
 //    /**
 //     * Sorting String using stream().sorted() and String.compareTo. Not Recommended
@@ -50,16 +44,18 @@ public class StreamSortingExample {
 //    }
 
     /**
+     * TODO: Double check whether this is true:
      * Recommended
      * Sorting String using stream().sorted() and String.compareTo.
      */
-    public List<Patient> sortByTumorTypeStreamTwo(List<Patient> patients) {
-
-        return patients.stream()
-                .sorted(comparing(Patient::getTumorType))
-                .collect(toList());
+    public List<NbaPlayerDto> sortByHigherSalaryAndAgeGreaterThan30(List<NbaPlayerDto> players) {
+        return players.stream()
+                .filter(p -> p.age() >= 30)
+                .sorted(comparing(NbaPlayerDto::salary).reversed())
+                .toList();
     }
 
+    //TODO: Add more complex examples. Add Tests.
 //    /**
 //     * Sorting Integers using List.sort(naturalOrder())
 //     */

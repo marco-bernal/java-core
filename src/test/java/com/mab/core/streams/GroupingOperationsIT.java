@@ -1,35 +1,30 @@
 package com.mab.core.streams;
 
 import com.mab.core.model.Car;
-import com.mab.core.test_utils.IntegrationTestBaseConfig;
-import com.mab.core.util.LoadDataSetsUtils;
+import com.mab.core.test_utils.IntegrationTestBase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import java.util.List;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@IntegrationTestBaseConfig
-class GroupingOperationsIT {
-
-    @Autowired
-    private LoadDataSetsUtils loadDataSetsUtils;
+class GroupingOperationsIT extends IntegrationTestBase {
 
     private GroupingOperations groupingOperations;
 
     @BeforeEach
     void setUp() {
-        groupingOperations = new GroupingOperations(loadDataSetsUtils);
+        groupingOperations = new GroupingOperations();
     }
 
     @Test
     void shouldGroupCarsByMake() {
+        //given
+        List<Car> cars = loadCars();
 
         //when
-        Map<String, List<Car>> groupedCarsByMake = groupingOperations.groupCarsByMake();
+        Map<String, List<Car>> groupedCarsByMake = groupingOperations.groupCarsByMake(cars);
 
         //then
         assertThat(groupedCarsByMake.values()).isNotEmpty();
@@ -37,9 +32,11 @@ class GroupingOperationsIT {
 
     @Test
     void shouldCountCarsByMake() {
+        //given
+        List<Car> cars = loadCars();
 
         //when
-        Map<String, Long> countsByMake = groupingOperations.countingByMake();
+        Map<String, Long> countsByMake = groupingOperations.countingByMake(cars);
 
         //then
         //List<Long> values = countsByMake.values().stream().toList();

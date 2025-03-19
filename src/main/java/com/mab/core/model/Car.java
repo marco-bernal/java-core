@@ -1,5 +1,8 @@
 package com.mab.core.model;
 
+import lombok.Builder;
+
+@Builder
 public record Car(
         Integer id,
         String make,

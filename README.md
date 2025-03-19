@@ -20,5 +20,5 @@ Repo that showcases examples of Java core.
     * Regular Expressions
 
 ## ToDo:
-
-* Add Jacoco Support
+* Add support for Integration Tests
+* Add Jacoco Support for code coverage

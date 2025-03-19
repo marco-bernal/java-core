@@ -1,6 +1,9 @@
 package com.mab.core.model;
 
-public record NbaPlayer(
+import lombok.Builder;
+
+@Builder
+public record NbaPlayerDto(
         String name,
         String team,
         int number,

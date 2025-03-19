@@ -1,43 +1,32 @@
 package com.mab.core.streams;
 
-import com.mab.core.model.Person;
-import com.mab.core.test_utils.IntegrationTestBaseConfig;
-import com.mab.core.util.LoadDataSetsUtils;
+import com.mab.core.model.EmployeeDto;
+import com.mab.core.test_utils.IntegrationTestBase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
-import java.util.stream.IntStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@IntegrationTestBaseConfig
-class IteratingIntStreamIT {
-
-    @Autowired
-    private LoadDataSetsUtils loadDataSetsUtils;
+class IteratingIntStreamIT extends IntegrationTestBase {
 
     private IteratingIntStream iteratingIntStream;
 
     @BeforeEach
     void setUp() {
-        iteratingIntStream = new IteratingIntStream(loadDataSetsUtils);
+        iteratingIntStream = new IteratingIntStream();
     }
 
     @Test
     void iterateOverWomenYoungerThan30() {
         //given
+        List<EmployeeDto> employees = loadEmployees();
 
         //when
-        List<Person> women = iteratingIntStream.loadFemales();
+        List<EmployeeDto> femaleWorkers = iteratingIntStream.filterFemaleWorkersAge30OrGreater(employees);
 
         //then
-        assertThat(women).hasSize(144);
-
-        IntStream.range(0, women.size())
-                .forEach( i -> {
-                    System.out.println(women.get(i));
-                });
+        assertThat(femaleWorkers).hasSize(61);
     }
 }

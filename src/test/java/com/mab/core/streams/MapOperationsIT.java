@@ -1,33 +1,32 @@
 package com.mab.core.streams;
 
+import com.mab.core.model.Car;
 import com.mab.core.model.CarRecommendationDto;
-import com.mab.core.test_utils.IntegrationTestBaseConfig;
-import com.mab.core.util.LoadDataSetsUtils;
+import com.mab.core.test_utils.IntegrationTestBase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
 import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@IntegrationTestBaseConfig
-class MapOperationsIT {
-
-    @Autowired
-    private LoadDataSetsUtils loadDataSetsUtils;
+class MapOperationsIT extends IntegrationTestBase {
 
     private MapOperations mapOperations;
 
     @BeforeEach
     void setUp() {
-        mapOperations = new MapOperations(loadDataSetsUtils);
+        mapOperations = new MapOperations();
     }
 
     @Test
     void getCarRecommendations() {
+        //given
+        List<Car> cars = loadCars();
+
         //when
-        Set<CarRecommendationDto> recommendations = mapOperations.getCarRecommendations();
+        Set<CarRecommendationDto> recommendations = mapOperations.getCarRecommendations(cars);
 
         //then
         assertThat(recommendations).hasSize(13);
@@ -37,7 +36,8 @@ class MapOperationsIT {
     @Test
     void getMeanPrice() {
         //given
-        Set<CarRecommendationDto> recommendations = mapOperations.getCarRecommendations();
+        List<Car> cars = loadCars();
+        Set<CarRecommendationDto> recommendations = mapOperations.getCarRecommendations(cars);
 
         //when
         Double meanPrice = mapOperations.getMeanPrice(recommendations);

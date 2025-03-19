@@ -1,4 +1,4 @@
-package com.mab.core.model;
+package com.mab.core.oop.equals_hash_code.model;
 
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -10,7 +10,6 @@ import lombok.Setter;
 @Builder
 @EqualsAndHashCode
 public class CustomerWithEqualsHashCode {
-
     private int age;
     private String name;
 }
