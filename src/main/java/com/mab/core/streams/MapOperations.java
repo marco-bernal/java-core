@@ -1,6 +1,6 @@
 package com.mab.core.streams;
 
-import com.mab.core.model.Car;
+import com.mab.core.model.CarDto;
 import com.mab.core.model.CarRecommendationDto;
 
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class MapOperations {
 
     //TODO: Add more operations
-    public Set<CarRecommendationDto> getCarRecommendations(List<Car> cars) {
+    public Set<CarRecommendationDto> getCarRecommendations(List<CarDto> cars) {
         return cars.stream()
                 .filter(c -> isCarRecommended(c.year(), c.price()))
                 .map(c -> new CarRecommendationDto(

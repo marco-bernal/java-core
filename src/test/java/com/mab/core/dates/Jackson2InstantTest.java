@@ -11,11 +11,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Jackson2InstantTest extends IntegrationTestBase {
 
-    private Jackson2Instant jackson2Instant;
+    private Jackson2LocalDateTime jackson2Instant;
 
     @BeforeEach
     void setUp() {
-        jackson2Instant = new Jackson2Instant();
+        jackson2Instant = new Jackson2LocalDateTime();
     }
 
     @Test

@@ -1,6 +1,6 @@
 package com.mab.core.streams;
 
-import com.mab.core.model.Car;
+import com.mab.core.model.CarDto;
 import com.mab.core.model.CarRecommendationDto;
 import com.mab.core.test_utils.IntegrationTestBase;
 import org.junit.jupiter.api.BeforeEach;
@@ -23,7 +23,7 @@ class MapOperationsIT extends IntegrationTestBase {
     @Test
     void getCarRecommendations() {
         //given
-        List<Car> cars = loadCars();
+        List<CarDto> cars = loadCars();
 
         //when
         Set<CarRecommendationDto> recommendations = mapOperations.getCarRecommendations(cars);
@@ -36,7 +36,7 @@ class MapOperationsIT extends IntegrationTestBase {
     @Test
     void getMeanPrice() {
         //given
-        List<Car> cars = loadCars();
+        List<CarDto> cars = loadCars();
         Set<CarRecommendationDto> recommendations = mapOperations.getCarRecommendations(cars);
 
         //when

@@ -6,7 +6,7 @@ import java.util.List;
 
 import static java.util.Comparator.comparing;
 
-public class Jackson2Instant {
+public class Jackson2LocalDateTime {
 
     public List<JacksonTestDto> getLatest3Tests(List<JacksonTestDto> testDates) {
         return testDates.stream()

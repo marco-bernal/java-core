@@ -1,7 +1,7 @@
 package com.mab.core.test_utils;
 
 import com.mab.core.configuration.properties.JsonFileProperties;
-import com.mab.core.model.Car;
+import com.mab.core.model.CarDto;
 import com.mab.core.model.EmployeeDto;
 import com.mab.core.model.JacksonTestDto;
 import com.mab.core.model.NbaPlayerDto;
@@ -18,7 +18,7 @@ public abstract class IntegrationTestBase {
     @Autowired
     private JsonFileProperties jsonFileProperties;
 
-    public List<Car> loadCars() {
+    public List<CarDto> loadCars() {
         return loadCarsFromJsonFile(jsonFileProperties.getCarsFileName());
     }
 

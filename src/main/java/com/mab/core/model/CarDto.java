@@ -3,7 +3,7 @@ package com.mab.core.model;
 import lombok.Builder;
 
 @Builder
-public record Car(
+public record CarDto(
         Integer id,
         String make,
         String model,

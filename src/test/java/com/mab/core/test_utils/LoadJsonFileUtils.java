@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 
 import com.mab.core.configuration.JacksonConfig;
 import com.mab.core.exception.ResourceLoadException;
-import com.mab.core.model.Car;
+import com.mab.core.model.CarDto;
 import com.mab.core.model.EmployeeDto;
 import com.mab.core.model.JacksonTestDto;
 import com.mab.core.model.NbaPlayerDto;
@@ -39,7 +39,7 @@ public class LoadJsonFileUtils {
 //        }
 //    }
 
-    public static List<Car> loadCarsFromJsonFile(String carsFileName) {
+    public static List<CarDto> loadCarsFromJsonFile(String carsFileName) {
         try {
             return new JacksonConfig().objectMapper().readValue(getFile(carsFileName), new TypeReference<>() {});
         } catch (IOException e) {
