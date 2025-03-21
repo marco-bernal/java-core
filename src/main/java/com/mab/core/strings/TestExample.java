@@ -1,4 +1,4 @@
-package com.mab.core.old.strings;
+package com.mab.core.strings;
 
 
 import java.io.File;

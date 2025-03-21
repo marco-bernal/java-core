@@ -1,6 +1,6 @@
 package com.mab.core.collections.conversion.set;
 
-import com.mab.core.model.Customer;
+import com.mab.core.model.EmployeeDto;
 import lombok.experimental.UtilityClass;
 
 import java.util.Map;
@@ -11,16 +11,17 @@ import java.util.stream.Collectors;
 public class Set2Map {
 
     /**
-     * Converts a customerSet into a Map, using java 8 streams.
+     * Converts a employeeSet into a Map, using java 8 streams.
      *
-     * @param values customer set.
-     * @return Map<Integer, String> containing customer's age and name.
+     * @param employees employees set.
+     * @return Map<Integer, String> containing employees age less than 30 and department.
      */
-    public static Map<Integer, String> getMapValuesFromSet(Set<Customer> values) {
-        return values.stream()
+    public static Map<String, String> getMapValuesFromSet(Set<EmployeeDto> employees) {
+        return employees.stream()
+                .filter(e -> e.age() < 30)
                 .collect(Collectors.toMap(
-                        Customer::getAge,
-                        Customer::getName
+                        EmployeeDto::employeeId,
+                        EmployeeDto::department
                 ));
     }
 }

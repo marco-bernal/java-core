@@ -16,4 +16,6 @@ public class FlatMapOperations {
                 .flatMap(List::stream)
                 .toList(); //Immutable collection.
     }
+
+    //TODO: Add more complex examples
 }

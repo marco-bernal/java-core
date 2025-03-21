@@ -18,3 +18,7 @@ Repo that showcases examples of Java core.
 
     * Reflection API
     * Regular Expressions
+
+## ToDo:
+* Add support for Integration Tests.
+* Add Jacoco Support for code coverage.

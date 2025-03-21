@@ -1,7 +1,7 @@
 utils:
   json:
     load:
-      carFileName: "/cars.json"
+      carsFileName: "/cars.json"
       employeesFileName: "/employees.json"
       nbaPlayersFileName: "/nba_players.json"
-      peopleFileName: "/people.json"
+      jacksonTestsFileName: "/jackson_tests.json"

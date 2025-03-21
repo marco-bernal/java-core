@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "utils.json.load")
 public class JsonFileProperties {
 
-    private String carFileName;
+    private String carsFileName;
     private String employeesFileName;
     private String nbaPlayersFileName;
-    private String peopleFileName;
+    private String jacksonTestsFileName;
 }

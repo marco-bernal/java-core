@@ -1,39 +1,30 @@
 package com.mab.core.collections.conversion;
 
-import com.mab.core.model.Customer;
+import com.mab.core.model.EmployeeDto;
+import com.mab.core.test_utils.IntegrationTestBase;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static com.mab.core.collections.conversion.set.Set2Map.getMapValuesFromSet;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class Set2MapTest {
+class Set2MapTest extends IntegrationTestBase {
 
     @Test
     void shouldConvertSetToMap() {
      //given
-     Set<Customer> customerSet = filloutCustomerSet();
+     Set<EmployeeDto> employeeSet = new HashSet<>(loadEmployees());
 
      //when
-     Map<Integer, String> customerMap = getMapValuesFromSet(customerSet);
+     Map<String, String> employeeMap = getMapValuesFromSet(employeeSet);
 
      //then
-     assertThat(customerMap)
+     assertThat(employeeMap)
              .isNotEmpty()
-             .containsKeys(34, 28, 40)
-             .containsValues("Joseph", "Logan", "Mary");
-
-    }
-
-    private Set<Customer> filloutCustomerSet() {
-        Customer c1 = Customer.builder().age(34).name("Joseph").build();
-        Customer c2 = Customer.builder().age(28).name("Logan").build();
-        Customer c3 = Customer.builder().age(40).name("Mary").build();
-
-        return Stream.of(c1, c2, c3).collect(Collectors.toSet());
+             .hasSize(105)
+     ;
     }
 }
