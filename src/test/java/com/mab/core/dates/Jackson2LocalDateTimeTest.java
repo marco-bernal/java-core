@@ -9,7 +9,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class Jackson2InstantTest extends IntegrationTestBase {
+class Jackson2LocalDateTimeTest extends IntegrationTestBase {
 
     private Jackson2LocalDateTime jackson2Instant;
 
