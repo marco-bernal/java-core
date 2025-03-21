@@ -11,15 +11,16 @@ import java.util.stream.Collectors;
 public class Set2Map {
 
     /**
-     * Converts a customerSet into a Map, using java 8 streams.
+     * Converts a employeeSet into a Map, using java 8 streams.
      *
      * @param employees employees set.
-     * @return Map<Integer, String> containing employees age and department.
+     * @return Map<Integer, String> containing employees age less than 30 and department.
      */
-    public static Map<Integer, String> getMapValuesFromSet(Set<EmployeeDto> employees) {
+    public static Map<String, String> getMapValuesFromSet(Set<EmployeeDto> employees) {
         return employees.stream()
+                .filter(e -> e.age() < 30)
                 .collect(Collectors.toMap(
-                        EmployeeDto::age,
+                        EmployeeDto::employeeId,
                         EmployeeDto::department
                 ));
     }

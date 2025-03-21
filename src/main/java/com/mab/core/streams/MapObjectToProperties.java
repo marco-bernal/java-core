@@ -6,7 +6,6 @@ import java.util.*;
 import static java.util.Comparator.comparingDouble;
 import static java.util.stream.Collectors.*;
 
-//TODO: Add tests
 public class MapObjectToProperties {
 
     public Map<String, List<String>> getCarModelsByMake(List<CarDto> cars) {
@@ -28,4 +27,6 @@ public class MapObjectToProperties {
                         entry -> entry.getValue().get().price()
                 ));
     }
+
+    //TODO: Add more complex examples
 }

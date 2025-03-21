@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ReduceOperatorTest {
+class ReduceOperationsTest {
 
-    private ReduceOperator reduceOperator;
+    private ReduceOperations reduceOperations;
 
     @BeforeEach
     void setUp() {
-        reduceOperator = new ReduceOperator();
+        reduceOperations = new ReduceOperations();
     }
 
     @Test
@@ -20,7 +20,7 @@ class ReduceOperatorTest {
         int[] values = {23, 45, 1, 5, 3, 86, 13, 52};
 
         //when
-        int result = reduceOperator.getArraySum(values);
+        int result = reduceOperations.getArraySum(values);
 
         //then
         assertThat(result).isEqualTo(228);

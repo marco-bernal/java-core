@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 
 public class MapOperations {
 
-    //TODO: Add more operations
     public Set<CarRecommendationDto> getCarRecommendations(List<CarDto> cars) {
         return cars.stream()
                 .filter(c -> isCarRecommended(c.year(), c.price()))
@@ -28,6 +27,8 @@ public class MapOperations {
                 .average()
                 .orElse(0);
     }
+
+    //TODO: Add more complex examples
 
     private boolean isCarRecommended(Integer year, Double price) {
         return year > 2010 && price < 12000;
