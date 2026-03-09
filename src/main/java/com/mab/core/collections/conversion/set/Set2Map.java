@@ -3,6 +3,7 @@ package com.mab.core.collections.conversion.set;
 import com.mab.core.model.EmployeeDto;
 import lombok.experimental.UtilityClass;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -23,5 +24,11 @@ public class Set2Map {
                         EmployeeDto::employeeId,
                         EmployeeDto::department
                 ));
+    }
+
+    public static Map<String, List<EmployeeDto>> getMapValuesFromSetTwo(Set<EmployeeDto> employees) {
+        return employees.stream()
+                .filter(e -> e.age() < 30)
+                .collect(Collectors.groupingBy(EmployeeDto::jobTitle));
     }
 }

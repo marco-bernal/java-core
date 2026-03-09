@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.3</version>
+        <version>4.0.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.mab.core</groupId>
@@ -16,11 +16,13 @@
 
     <properties>
         <!-- Java -->
-        <java.version>23</java.version>
+        <java.version>25</java.version>
         <!-- Maven -->
-        <mvn.compiler.version>3.13.0</mvn.compiler.version>
-        <mvn.surefire.version>3.5.2</mvn.surefire.version>
-        <mvn.failsafe.version>3.5.2</mvn.failsafe.version>
+        <mvn.compiler.version>3.15.0</mvn.compiler.version>
+        <mvn.surefire.version>3.5.5</mvn.surefire.version>
+        <mvn.failsafe.version>3.5.5</mvn.failsafe.version>
+        <!-- Misc -->
+        <lombok.version>1.18.42</lombok.version>
     </properties>
 
     <dependencies>

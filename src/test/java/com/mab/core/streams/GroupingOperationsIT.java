@@ -43,4 +43,27 @@ class GroupingOperationsIT extends IntegrationTestBase {
         // TODO: Research how to do assertJ assertions for maps for both key and value(s).
         assertThat(countsByMake.values()).isNotEmpty();
     }
+
+    @Test
+    void shouldAddNewCar() {
+        //given
+        Map<String, List<CarDto>> existingCarsByAllMakes = groupingOperations.groupCarsByMake(loadCars());
+        CarDto newCar = CarDto.builder()
+                .make("Toyota")
+                .model("Prius Premiere")
+                .color("Obsidian")
+                .year(2017)
+                .price(28000.0)
+                .build();
+
+        //when
+        Map<String, List<CarDto>> updatedToyotaCars = groupingOperations.addNewCar(
+                existingCarsByAllMakes,
+                newCar,
+                newCar.make()
+        );
+
+        //then
+        assertThat(updatedToyotaCars.get(newCar.make())).contains(newCar);
+    }
 }
